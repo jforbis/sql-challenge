@@ -18,34 +18,22 @@ CREATE TABLE "employees" (
 
 CREATE TABLE "dept_emp" (
     "emp_no" Integer   NOT NULL,
-    "dept_no" Varchar   NOT NULL,
-    CONSTRAINT "pk_dept_emp" PRIMARY KEY (
-        "emp_no"
-     )
+    "dept_no" Varchar   NOT NULL
 );
 
 CREATE TABLE "salaries" (
     "emp_no" Integer   NOT NULL,
-    "salary" Integer   NOT NULL,
-    CONSTRAINT "pk_salaries" PRIMARY KEY (
-        "emp_no"
-     )
+    "salary" Integer   NOT NULL
 );
 
 CREATE TABLE "dept_manager" (
     "emp_no" Integer   NOT NULL,
-    "dept_no" Varchar   NOT NULL,
-    CONSTRAINT "pk_dept_manager" PRIMARY KEY (
-        "emp_no"
-     )
+    "dept_no" Varchar   NOT NULL
 );
 
 CREATE TABLE "titles" (
     "title_id" Varchar   NOT NULL,
-    "title" Varchar   NOT NULL,
-    CONSTRAINT "pk_titles" PRIMARY KEY (
-        "title_id"
-     )
+    "title" Varchar   NOT NULL
 );
 
 CREATE TABLE "departments" (
