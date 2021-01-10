@@ -34,7 +34,7 @@ CREATE TABLE "salaries" (
 
 CREATE TABLE "dept_manager" (
     "emp_no" Integer   NOT NULL,
-    "dept_no" Integer   NOT NULL,
+    "dept_no" Varchar   NOT NULL,
     CONSTRAINT "pk_dept_manager" PRIMARY KEY (
         "emp_no"
      )
