@@ -82,3 +82,11 @@ INNER JOIN departments d ON
 dm.dept_no = d.dept_no
 INNER JOIN employees e ON
 dm.emp_no = e.emp_no;
+
+-- Query #4 (only getting 24 lines - why?)
+SELECT d.dept_name, e.emp_no, e.last_name, e.first_name
+FROM employees e
+INNER JOIN dept_manager dm ON
+e.emp_no = dm.emp_no
+INNER JOIN departments d ON
+dm.dept_no = d.dept_no;
