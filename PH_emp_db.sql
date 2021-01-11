@@ -30,8 +30,9 @@ CREATE TABLE "salaries" (
 );
 
 CREATE TABLE "dept_manager" (
-    "emp_no" Integer   NOT NULL,
     "dept_no" Varchar   NOT NULL,
+    "emp_no" Integer   NOT NULL,
+	PRIMARY KEY (dept_no, emp_no),
 	FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
 	FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
