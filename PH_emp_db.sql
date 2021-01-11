@@ -2,7 +2,14 @@
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/2ZIEFA
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
+-- Table Schemata
+
+DROP TABLE departments CASCADE;
+DROP TABLE dept_emp CASCADE;
 DROP TABLE dept_manager CASCADE;
+DROP TABLE employees CASCADE;
+DROP TABLE salaries CASCADE;
+DROP TABLE titles CASCADE;
 
 CREATE TABLE "employees" (
     "emp_no" Integer   NOT NULL,
@@ -55,4 +62,7 @@ SELECT * FROM dept_manager
 SELECT * FROM employees
 SELECT * FROM salaries
 SELECT * FROM titles
+
+--Queries
+
 
