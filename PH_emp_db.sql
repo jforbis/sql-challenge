@@ -70,3 +70,7 @@ s.salary
 FROM employees e
 INNER JOIN salaries s ON
 e.emp_no = s.emp_no;
+
+-- Query #2
+SELECT last_name, first_name, hire_date FROM employees
+WHERE hire_date >= '1986-1-1' AND hire_date <= '1986/12/31';
