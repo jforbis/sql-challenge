@@ -76,9 +76,9 @@ SELECT last_name, first_name, hire_date FROM employees
 WHERE hire_date >= '1986-1-1' AND hire_date <= '1986/12/31';
 
 -- Query #3
-SELECT dm.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name
+SELECT dm.dept_no, d.dept_name, dm.emp_no, e.last_name, e.first_name
 FROM dept_manager dm
 INNER JOIN departments d ON
 dm.dept_no = d.dept_no
 INNER JOIN employees e ON
-e.emp_no = dm.emp_no;
+dm.emp_no = e.emp_no;
