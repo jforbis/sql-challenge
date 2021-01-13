@@ -88,13 +88,12 @@ dm.emp_no = e.emp_no;
 
 -- Query #4. List the department of each employee with the following information: 
 -- 			 employee number, last name, first name, and department name.
--- (only getting 24 lines - why?)
 SELECT d.dept_name, e.emp_no, e.last_name, e.first_name
 FROM employees e
-INNER JOIN dept_manager dm ON
-e.emp_no = dm.emp_no
+INNER JOIN dept_emp de ON
+e.emp_no = de.emp_no
 INNER JOIN departments d ON
-dm.dept_no = d.dept_no;
+de.dept_no = d.dept_no;
 
 -- Query #5. List first name, last name, and sex for employees whose first name
 -- 			 is "Hercules" and last names begin with "B."
@@ -104,13 +103,12 @@ AND LEFT(last_name, 1) = 'B'
 
 -- Query #6. List all employees in the Sales department, including their 
 -- 			 employee number, last name, first name, and department name.
--- (Why are there only 2 showing up??)
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e
-INNER JOIN dept_manager dm ON
-e.emp_no = dm.emp_no
+INNER JOIN dept_emp de ON
+e.emp_no = de.emp_no
 INNER JOIN departments d ON
-dm.dept_no = d.dept_no
+de.dept_no = d.dept_no
 WHERE dept_name = 'Sales';
 
 -- Query #7. List all employees in the Sales and Development departments, including 
@@ -118,10 +116,10 @@ WHERE dept_name = 'Sales';
 -- (Why are there only 2 showing up??)
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e
-INNER JOIN dept_manager dm ON
-e.emp_no = dm.emp_no
+INNER JOIN dept_emp de ON
+e.emp_no = de.emp_no
 INNER JOIN departments d ON
-dm.dept_no = d.dept_no
+de.dept_no = d.dept_no
 WHERE dept_name = 'Sales'
 OR dept_name = 'Development';
 
