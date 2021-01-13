@@ -1,6 +1,6 @@
 # sql-challenge
 
-In this project, I designed the SQL database tables to hold the data from the original 6 CSVs I was provided. To do this I completed the following:
+In this project, I designed the SQL database tables to hold the data from the original 6 CSVs I was provided. To do this I completed the following:<br>
 **Data Engineering Steps**
 * Created an ERD (that included data types, primary keys, foreign keys and even one composite key) of what my SQL database tables needed to look like.
 * Imported that ERD into PGAdmin to create the data base structure.
